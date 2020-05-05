@@ -50,6 +50,7 @@ export DESTINATION="--destination $IMAGE"
 export ARGS="$CACHE $CONTEXT $DOCKERFILE $DESTINATION $INPUT_EXTRA_ARGS"
 echo $ARGS
 
+mkdir -p /kaniko/.docker/
 cat <<EOF >/kaniko/.docker/config.json
 {
     "auths": {
